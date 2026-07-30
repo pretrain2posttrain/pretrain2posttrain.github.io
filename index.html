@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transitioning from Pre-Training to Post-Training — NeurIPS 2026 Workshop</title>
+  <meta name="description" content="A NeurIPS 2026 workshop on the interaction between pre-training and post-training in modern foundation models. Sydney, Australia, December 11, 2026." />
+  <meta property="og:title" content="Transitioning from Pre-Training to Post-Training — NeurIPS 2026 Workshop" />
+  <meta property="og:description" content="Crystallizing the science of the pre-training-to-post-training transition in foundation models." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="index.html">
+        <span class="nav__brand-mark">P&#8202;→&#8202;P</span>
+        <span class="nav__brand-text">Pre&#8202;→&#8202;Post</span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="call.html">Call for Papers</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="speakers.html">Speakers</a></li>
+        <li><a href="organizers.html">Organizers</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <p class="hero__eyebrow">NeurIPS 2026 Workshop</p>
+        <h1 class="hero__title">Transitioning from<br />Pre-Training to Post-Training</h1>
+        <p class="hero__lede">
+          A workshop on the interaction between pre-training and post-training in modern
+          foundation models &mdash; what a base model must possess for post-training to
+          succeed, how each procedure reshapes it, and when the transition fails.
+          Our goal is to crystallize the <em>science</em> of this transition.
+        </p>
+        <dl class="hero__facts">
+          <div><dt>Date</dt><dd>December 11, 2026</dd></div>
+          <div><dt>Location</dt><dd>Sydney, Australia</dd></div>
+          <div><dt>Venue</dt><dd>NeurIPS 2026 &middot; <span class="tbd">page link TBD</span></dd></div>
+        </dl>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="call.html">Call for Papers</a>
+          <a class="btn btn--ghost" href="speakers.html">Invited speakers</a>
+        </div>
+        <p class="hero__meta">
+          Full-day, in-person &middot; Non-archival short &amp; long papers &middot; Hosted on OpenReview
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap wrap--narrow">
+        <h2 class="section__title">Overview</h2>
+        <p>
+          Foundation-model development has grown into a complicated, multi-stage pipeline.
+          Large-scale pre-training via next-token prediction is followed by mid-training and/or
+          continual pre-training, and then by an increasingly complex post-training phase &mdash;
+          supervised fine-tuning, preference optimization (e.g., DPO), RLHF, RL with verifiable
+          rewards (RLVR), self-improvement, and distillation. Yet we lack a principled understanding
+          of how these stages relate: what each stage is for, what capabilities it must inherit, and
+          which steps are actually necessary. As instruction and reasoning data increasingly enters
+          the pre-training mix, the boundary between &ldquo;pre&rdquo; and &ldquo;post&rdquo; is
+          itself becoming blurry.
+        </p>
+        <div class="callout">
+          <h3 class="callout__title">Why now</h3>
+          <p>
+            Recent work shows this interaction is more consequential than previously understood.
+            <em>Catastrophic overtraining</em> (Springer et al., 2025) demonstrates that extending
+            pre-training beyond a certain token budget can make models <em>harder</em> to fine-tune,
+            degrading post-training even as pre-training loss improves. State-of-the-art reasoning
+            systems rely on RL post-training but typically require SFT warm-up, meaning
+            pre-training-side sensitivities can cascade through multiple stages before surfacing as
+            failures. Meanwhile, fully open pipelines such as OLMo and Pythia now provide intermediate
+            checkpoints, data, and code &mdash; making controlled study of this transition feasible
+            for the first time.
+          </p>
+        </div>
+        <h3 class="subsection__title">Central questions</h3>
+        <ol class="q-list">
+          <li>What pre-training behaviors, representations, or data signatures are required for post-training to succeed &mdash; and how do we even define &ldquo;success&rdquo;?</li>
+          <li>Beyond targeted benchmarks, what secondary effects do SFT, DPO, RLXF, RLVR, self-improvement, and distillation have on the model?</li>
+          <li>When does post-training fail (mode/entropy collapse, reward hacking, alignment tax, capability forgetting), and can pre-training-side signals predict failure?</li>
+          <li>How do data composition, curriculum, mid-training, optimizer choices, and architecture during pre-training mediate downstream post-training quality?</li>
+        </ol>
+        <div class="cta">
+          <a class="btn btn--primary" href="call.html">Read the Call for Papers</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer__inner">
+      <p class="footer__title">Transitioning from Pre-Training to Post-Training</p>
+      <p class="footer__sub">First edition &middot; NeurIPS 2026 &middot; Sydney, Australia &middot; December 11, 2026</p>
+      <p class="footer__credit">Livestreamed &amp; recorded &middot; Non-archival &middot; OpenReview</p>
+    </div>
+  </footer>
+  <script src="assets/script.js"></script>
+</body>
+</html>
