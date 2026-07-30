@@ -62,36 +62,24 @@
       <div class="wrap wrap--narrow">
         <h2 class="section__title">Overview</h2>
         <p>
-          Foundation-model development has grown into a complicated, multi-stage pipeline.
-          Large-scale pre-training via next-token prediction is followed by mid-training and/or
-          continual pre-training, and then by an increasingly complex post-training phase &mdash;
-          supervised fine-tuning, preference optimization (e.g., DPO), RLHF, RL with verifiable
-          rewards (RLVR), self-improvement, and distillation. Yet we lack a principled understanding
-          of how these stages relate: what each stage is for, what capabilities it must inherit, and
-          which steps are actually necessary. As instruction and reasoning data increasingly enters
-          the pre-training mix, the boundary between &ldquo;pre&rdquo; and &ldquo;post&rdquo; is
-          itself becoming blurry.
+          Modern foundation models are built in stages: large-scale pre-training, followed by an
+          increasingly complex post-training phase &mdash; supervised fine-tuning, preference
+          optimization, reinforcement learning, self-improvement, and distillation. Yet we lack a
+          principled understanding of how these stages relate: what each stage is for, what a base
+          model must provide for the next to succeed, and which steps are actually necessary. As
+          instruction and reasoning data increasingly enters the pre-training mix, the boundary
+          between &ldquo;pre&rdquo; and &ldquo;post&rdquo; is itself becoming blurry.
         </p>
-        <div class="callout">
-          <h3 class="callout__title">Why now</h3>
-          <p>
-            Recent work shows this interaction is more consequential than previously understood.
-            <em>Catastrophic overtraining</em> (Springer et al., 2025) demonstrates that extending
-            pre-training beyond a certain token budget can make models <em>harder</em> to fine-tune,
-            degrading post-training even as pre-training loss improves. State-of-the-art reasoning
-            systems rely on RL post-training but typically require SFT warm-up, meaning
-            pre-training-side sensitivities can cascade through multiple stages before surfacing as
-            failures. Meanwhile, fully open pipelines such as OLMo and Pythia now provide intermediate
-            checkpoints, data, and code &mdash; making controlled study of this transition feasible
-            for the first time.
-          </p>
-        </div>
+        <p>
+          This workshop brings together theory, empirical evidence, and benchmarks to turn folklore
+          about this pipeline into science.
+        </p>
         <h3 class="subsection__title">Central questions</h3>
         <ol class="q-list">
-          <li>What pre-training behaviors, representations, or data signatures are required for post-training to succeed &mdash; and how do we even define &ldquo;success&rdquo;?</li>
-          <li>Beyond targeted benchmarks, what secondary effects do SFT, DPO, RLXF, RLVR, self-improvement, and distillation have on the model?</li>
-          <li>When does post-training fail (mode/entropy collapse, reward hacking, alignment tax, capability forgetting), and can pre-training-side signals predict failure?</li>
-          <li>How do data composition, curriculum, mid-training, optimizer choices, and architecture during pre-training mediate downstream post-training quality?</li>
+          <li>What must a pre-trained model possess for post-training to succeed &mdash; and how do we even define &ldquo;success&rdquo;?</li>
+          <li>How do different post-training procedures reshape the base model, beyond targeted benchmark gains?</li>
+          <li>When and why does post-training fail, and can pre-training-side signals predict it?</li>
+          <li>How do data and optimization choices govern the transitions between stages?</li>
         </ol>
         <div class="cta">
           <a class="btn btn--primary" href="call.html">Read the Call for Papers</a>
