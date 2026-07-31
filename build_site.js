@@ -27,7 +27,7 @@ const ORGANIZERS = [
   { name: "Sham Kakade",     affil: "Harvard · Kempner Institute", url: "https://shamulent.github.io", img: "kakade.jpg", initials: "SK" },
   { name: "Eran Malach",     affil: "Apple ML Research",           url: "https://www.eranmalach.com",  img: null,         initials: "EM" },
   { name: "Samy Jelassi",    affil: "Microsoft Research NE",       url: "https://sjelassi.github.io",  img: "jelassi.jpg", initials: "SJ" },
-  { name: "Clara Mohri",     affil: "Harvard University",          url: "https://kempnerinstitute.harvard.edu/people/our-people/clara-mohri/", img: "mohri.jpg", initials: "CM" },
+  { name: "Clara Mohri",     affil: "Harvard University",          url: "https://cmohri.github.io/", img: "mohri.jpg", initials: "CM" },
   { name: "Sunny (Tian) Qin", affil: "Harvard University",         url: "https://sunnytqin.github.io", img: "qin.jpg",    initials: "SQ" },
   { name: "Rachit Bansal",   affil: "Harvard SEAS · Contact",      url: "https://rachitbansal.github.io", img: "bansal.jpg", initials: "RB" },
   { name: "Harman Singh",    affil: "UC Berkeley",                 url: "https://harmandotpy.github.io", img: "singh.jpg", initials: "HS" },
@@ -75,9 +75,6 @@ function head(title, rel) {
   <meta property="og:title" content="${SITE_TITLE} — ${VENUE} Workshop" />
   <meta property="og:description" content="Crystallizing the science of the pre-training-to-post-training transition in foundation models." />
   <meta property="og:type" content="website" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="${rel}assets/style.css" />
 </head>
 <body>
@@ -150,7 +147,7 @@ function homeMain() {
     <section class="hero">
       <div class="wrap">
         <p class="hero__eyebrow">${VENUE} Workshop</p>
-        <h1 class="hero__title">Transitioning from<br />Pre-Training to Post-Training</h1>
+        <h1 class="hero__title">Transitioning from Pre-Training to Post-Training</h1>
         <p class="hero__lede">
           A workshop on the interaction between pre-training and post-training in modern
           foundation models &mdash; what a base model must possess for post-training to
