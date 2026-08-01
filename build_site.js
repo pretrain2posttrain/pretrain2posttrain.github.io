@@ -56,9 +56,9 @@ const SCHEDULE = [
 ];
 
 const DATES = [
-  ["Submission portal opens", "", ""],
-  ["Submission deadline", "", ""],
-  ["Author notification", "", ""],
+  ["Submission portal opens", "August 1, 2026", "2026-08-01"],
+  ["Submission deadline", "Aug 29 &rsquo;26 (Anywhere on Earth)", "2026-08-29"],
+  ["Author notification", "September 29, 2026", "2026-09-29"],
   ["Camera-ready / poster upload", "", ""],
   ["Workshop day", DATE, "2026-12-11"],
 ];
@@ -224,7 +224,7 @@ function callMain() {
   return `
   <main id="main">
     ${pageHeader(VENUE + " Workshop", "Call for Papers",
-      "We invite <strong>short and long papers</strong> on any topic below, in the <strong>NeurIPS format</strong>. Submissions are non-archival; work already published at NeurIPS or other major ML conferences is not eligible.")}
+      "We invite <strong>short and long papers</strong> on any topic below, formatted in the author&rsquo;s choice of <strong>NeurIPS</strong>, <strong>ICML</strong>, or <strong>ICLR</strong> style. Submissions are non-archival; work already published at NeurIPS or other major ML conferences is not eligible.")}
 
     <section class="section">
       <div class="wrap">
@@ -245,13 +245,13 @@ ${cards}
         <ul class="facts">
           <li><span class="facts__k">Submission portal</span><span class="facts__v"><span class="tbd">OpenReview link — TBD</span></span></li>
           <li><span class="facts__k">Tracks</span><span class="facts__v">Short and long papers</span></li>
-          <li><span class="facts__k">Format</span><span class="facts__v">NeurIPS format (same style file as the main conference)</span></li>
-          <li><span class="facts__k">Page limits</span><span class="facts__v"><span class="tbd">TBD</span> — posted with the submission site</span></li>
+          <li><span class="facts__k">Format</span><span class="facts__v">Author&rsquo;s choice of <strong>NeurIPS</strong>, <strong>ICML</strong>, or <strong>ICLR</strong> style file</span></li>
+          <li><span class="facts__k">Page limit</span><span class="facts__v">Matches the chosen format&rsquo;s own main-conference limit (excluding references &amp; appendix): <strong>9 pages</strong> for NeurIPS, <strong>8 pages</strong> for ICML, <strong>9 pages</strong> for ICLR</span></li>
           <li><span class="facts__k">Archival?</span><span class="facts__v">No &mdash; accepted papers hosted on OpenReview as non-archival</span></li>
           <li><span class="facts__k">Eligibility</span><span class="facts__v">No work already published at NeurIPS or other major ML venues</span></li>
+          <li><span class="facts__k">Reviewing</span><span class="facts__v">Each submission must nominate a reciprocal reviewer, who may be contacted to review if additional reviewers are needed</span></li>
         </ul>
         <p class="note">
-          Authors unable to attend in person may upload posters and 3-minute spotlights.
           All talks and the panel will be livestreamed and recorded.
         </p>
       </div>
