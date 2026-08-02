@@ -132,7 +132,7 @@ function pageHeader(eyebrow, title, intro) {
 function personCard(p, big) {
   const size = big ? "" : " avatar--sm";
   const media = p.img
-    ? `<img class="avatar${size}" src="assets/img/${p.img}" alt="${p.name}" loading="lazy" width="${big ? 108 : 72}" height="${big ? 108 : 72}" />`
+    ? `<img class="avatar${size}" src="assets/img/${p.img}" alt="${p.name}" loading="lazy" width="${big ? 128 : 92}" height="${big ? 128 : 92}" />`
     : `<span class="avatar${size}" data-initials="${p.initials}" aria-hidden="true"></span>`;
   return `          <a class="person" href="${p.url}" target="_blank" rel="noopener">
             ${media}

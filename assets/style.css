@@ -284,37 +284,39 @@ strong { font-weight: 700; }
 
 /* ---------- People (speakers & organizers, clickable) ---------- */
 .people {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  gap: 20px;
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 26px;
 }
 .orgs {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-  gap: 16px;
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 22px;
 }
 .person {
   display: flex; flex-direction: column; align-items: center; text-align: center;
   gap: 4px; background: var(--paper); border: 1px solid var(--line);
-  padding: 22px 18px 20px; color: var(--ink); text-decoration: none;
+  padding: 28px 22px 24px; color: var(--ink); text-decoration: none;
+  width: 240px; box-sizing: border-box;
 }
+.orgs .person { width: 220px; padding: 24px 18px 22px; }
 .person:hover { border-color: var(--ink); }
-.person__name { font-family: var(--serif); font-weight: 700; font-size: 1.08rem; margin-top: 4px; }
-.person__affil { font-size: 14px; color: var(--ink-soft); }
+.person__name { font-family: var(--serif); font-weight: 700; font-size: 1.18rem; margin-top: 6px; }
+.person__affil { font-size: 15px; color: var(--ink-soft); }
 .person__ext { font-size: .72em; color: var(--ink-faint); vertical-align: super; }
-.orgs .person__name { font-size: 1rem; }
-.orgs .person__affil { font-size: 13px; color: var(--ink-faint); }
+.orgs .person__name { font-size: 1.08rem; }
+.orgs .person__affil { font-size: 14px; color: var(--ink-faint); }
 
 /* Avatar: <img> headshot, or initials fallback for a missing photo */
 .avatar {
-  width: 104px; height: 104px; border-radius: 50%;
-  margin: 0 auto 12px; overflow: hidden;
+  width: 128px; height: 128px; border-radius: 50%;
+  margin: 0 auto 14px; overflow: hidden;
   display: flex; align-items: center; justify-content: center;
   background: var(--paper-alt);
   border: 1px solid var(--line);
-  font-family: var(--serif); font-weight: 700; font-size: 28px; color: var(--ink-soft);
+  font-family: var(--serif); font-weight: 700; font-size: 32px; color: var(--ink-soft);
 }
 img.avatar { object-fit: cover; display: block; }
 .avatar[data-initials]::after { content: attr(data-initials); }
-.avatar--sm { width: 72px; height: 72px; font-size: 20px; margin-bottom: 10px; }
+.avatar--sm { width: 92px; height: 92px; font-size: 24px; margin-bottom: 12px; }
 
 /* ---------- Accepted papers empty state ---------- */
 .empty-state {
