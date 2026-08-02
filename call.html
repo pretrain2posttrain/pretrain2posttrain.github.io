@@ -46,14 +46,62 @@
           We solicit theoretical, empirical, and methodological work across the following areas.
           This list is not exhaustive.
         </p>
-        <div class="cards">
-          <article class="card"><h3 class="card__title">Pre-training as a substrate</h3><p>Data mixtures and curricula, late-pre-training stages (continued/mid-training, LR-decay), and predictive pre-training signals for post-training outcomes.</p></article>
-          <article class="card"><h3 class="card__title">The mechanics of post-training</h3><p>Procedural contrasts across SFT/RLXF/RLVR/distillation, sharpening vs. broadening of capabilities, and mechanistic localization of alignment, refusal, persona, and reasoning.</p></article>
-          <article class="card"><h3 class="card__title">Failure modes</h3><p>Mode/entropy collapse and reward hacking, alignment tax and capability forgetting, and theoretical lower bounds on what post-training can accomplish.</p></article>
-          <article class="card"><h3 class="card__title">Data &amp; optimization in the transition</h3><p>Curriculum and synthetic data, scaling laws for SFT/preference/RL data, and how LR schedules, optimizer-state inheritance, and regularization shape what is recoverable.</p></article>
-          <article class="card"><h3 class="card__title">Re-imagining the pipeline</h3><p>Folding post-training data into pre-training, and joint pipeline design when pre- and post-training are co-designed for compute, data, and objectives.</p></article>
-          <article class="card"><h3 class="card__title">Evaluation &amp; open science</h3><p>Evaluating whether post-training &ldquo;succeeded&rdquo; beyond benchmark deltas, and pre-training metrics that are actually predictive of post-training success.</p></article>
-        </div>
+        <ul class="topics-list">
+          <li>
+            <div class="topics-list__content">
+              <h3>Foundations laid during pre-training</h3>
+              <p>How data mixtures, curricula, continued or mid-training, learning-rate decay, and other late-stage pre-training decisions shape downstream capabilities.</p>
+            </div>
+          </li>
+          <li>
+            <div class="topics-list__content">
+              <h3>The mechanics of post-training</h3>
+              <p>Comparisons across supervised fine-tuning, reinforcement learning from human or AI feedback, reinforcement learning with verifiable rewards, and distillation; how these methods sharpen, broaden, suppress, or reorganize capabilities.</p>
+            </div>
+          </li>
+          <li>
+            <div class="topics-list__content">
+              <h3>The development of model behaviors across training</h3>
+              <p>Identifying when alignment, reasoning, instruction following, refusal, persona, and other behaviors emerge during specific stages of post-training, and distinguishing changes created by post-training from capabilities already present after pre-training.</p>
+            </div>
+          </li>
+          <li>
+            <div class="topics-list__content">
+              <h3>Interactions between pre-training and post-training data</h3>
+              <p>How particular pre-training data mixtures, domains, curricula, or objectives make subsequent post-training more or less effective; whether post-training outcomes depend on related knowledge, behaviors, or representations being established during pre-training.</p>
+            </div>
+          </li>
+          <li>
+            <div class="topics-list__content">
+              <h3>Failure modes and fundamental limits</h3>
+              <p>Mode or entropy collapse, reward hacking, capability forgetting, alignment taxes, and theoretical or empirical limits on what post-training can recover or change.</p>
+            </div>
+          </li>
+          <li>
+            <div class="topics-list__content">
+              <h3>Data and optimization across the training transition</h3>
+              <p>Synthetic data, scaling laws for supervised, preference, and reinforcement-learning data, optimizer-state inheritance, learning-rate schedules, regularization, and curriculum design across training stages.</p>
+            </div>
+          </li>
+          <li>
+            <div class="topics-list__content">
+              <h3>Predicting post-training outcomes from pre-training</h3>
+              <p>Developing metrics, representations, or behavioral signals during pre-training that forecast later trainability, alignment, robustness, and capability gains.</p>
+            </div>
+          </li>
+          <li>
+            <div class="topics-list__content">
+              <h3>Reimagining the training pipeline</h3>
+              <p>Folding traditionally post-training data and objectives into pre-training, jointly designing training stages, and allocating data and compute across the full pipeline.</p>
+            </div>
+          </li>
+          <li>
+            <div class="topics-list__content">
+              <h3>Evaluation and open science</h3>
+              <p>Evaluating post-training beyond benchmark improvements through causal experiments, standardized protocols, intermediate checkpoints, and openly reproducible training studies.</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -61,7 +109,7 @@
       <div class="wrap wrap--narrow">
         <h2 class="section__title">Submission</h2>
         <ul class="facts">
-          <li><span class="facts__k">Submission portal</span><span class="facts__v"><span class="tbd">OpenReview link — TBD</span></span></li>
+          <li><span class="facts__k">Submission portal</span><span class="facts__v"><a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/Pre-to-Post">OpenReview submission portal</a></span></li>
           <li><span class="facts__k">Tracks</span><span class="facts__v">Short and long papers</span></li>
           <li><span class="facts__k">Format</span><span class="facts__v">Author&rsquo;s choice of <strong>NeurIPS</strong>, <strong>ICML</strong>, or <strong>ICLR</strong> style file</span></li>
           <li><span class="facts__k">Page limit</span><span class="facts__v">Matches the chosen format&rsquo;s own main-conference limit (excluding references &amp; appendix): <strong>9 pages</strong> for NeurIPS, <strong>8 pages</strong> for ICML, <strong>9 pages</strong> for ICLR</span></li>
