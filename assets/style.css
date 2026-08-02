@@ -217,14 +217,12 @@ strong { font-weight: 700; }
   max-width: 940px;
   margin: 4px 0 0;
   padding: 0;
-  border-top: 1px solid var(--line);
 }
 .topics-list li {
   display: grid;
   grid-template-columns: 24px minmax(0, 1fr);
   gap: 10px;
   padding: 19px 14px 19px 8px;
-  border-bottom: 1px solid var(--line);
 }
 .topics-list li::before {
   content: "\2022";
