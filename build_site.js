@@ -21,15 +21,17 @@ const SPEAKERS = [
   { name: "Hanna Hajishirzi", affil: "University of Washington & Microsoft", url: "https://homes.cs.washington.edu/~hannaneh/", img: "hajishirzi.jpg" },
   { name: "Sewon Min",       affil: "UC Berkeley & AI2",                 url: "https://www.sewonmin.com/",                    img: "min.jpg" },
   { name: "Jason Weston",    affil: "Meta FAIR & NYU",                   url: "https://www.thespermwhale.com/jaseweston/",    img: "weston.jpg" },
+  { name: "Anirudh Goyal",   affil: "Meta",                              url: "https://anirudh9119.github.io/",              img: "goyal.jpg" },
 ];
 
+/* sorted alphabetically by last name */
 const ORGANIZERS = [
-  { name: "Sham Kakade",     affil: "Harvard · Kempner Institute", url: "https://shamulent.github.io", img: "kakade.jpg", initials: "SK" },
-  { name: "Eran Malach",     affil: "Apple ML Research",           url: "https://www.eranmalach.com",  img: null,         initials: "EM" },
+  { name: "Rachit Bansal",   affil: "Harvard University · Kempner Institute · Contact", url: "https://rachitbansal.github.io", img: "bansal.jpg", initials: "RB" },
   { name: "Samy Jelassi",    affil: "Microsoft Research NE",       url: "https://sjelassi.github.io",  img: "jelassi.jpg", initials: "SJ" },
-  { name: "Clara Mohri",     affil: "Harvard University",          url: "https://cmohri.github.io/", img: "mohri.jpg", initials: "CM" },
-  { name: "Sunny (Tian) Qin", affil: "Harvard University",         url: "https://sunnytqin.github.io", img: "qin.jpg",    initials: "SQ" },
-  { name: "Rachit Bansal",   affil: "Harvard SEAS · Contact",      url: "https://rachitbansal.github.io", img: "bansal.jpg", initials: "RB" },
+  { name: "Sham Kakade",     affil: "Harvard University · Kempner Institute", url: "https://shamulent.github.io", img: "kakade.jpg", initials: "SK" },
+  { name: "Eran Malach",     affil: "Apple ML Research",           url: "https://www.eranmalach.com",  img: null,         initials: "EM" },
+  { name: "Clara Mohri",     affil: "Harvard University · Kempner Institute", url: "https://cmohri.github.io/", img: "mohri.jpg", initials: "CM" },
+  { name: "Sunny (Tian) Qin", affil: "Harvard University · Kempner Institute", url: "https://sunnytqin.github.io", img: "qin.jpg",    initials: "SQ" },
   { name: "Harman Singh",    affil: "UC Berkeley",                 url: "https://harmandotpy.github.io", img: "singh.jpg", initials: "HS" },
 ];
 
@@ -90,7 +92,6 @@ function header(active, rel) {
   <header class="site-header" id="top">
     <nav class="nav" aria-label="Primary">
       <a class="nav__brand" href="${rel}index.html">
-        <span class="nav__brand-mark">P&#8202;→&#8202;P</span>
         <span class="nav__brand-text">Pre&#8202;→&#8202;Post</span>
       </a>
       <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
