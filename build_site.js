@@ -158,7 +158,7 @@ function homeMain() {
         <dl class="hero__facts">
           <div><dt>Date</dt><dd>${DATE}</dd></div>
           <div><dt>Location</dt><dd>${LOCATION}</dd></div>
-          <div><dt>Venue</dt><dd>${VENUE} &middot; <span class="tbd">page link TBD</span></dd></div>
+          <div><dt>Venue</dt><dd>${VENUE} &middot; <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/Pre-to-Post">OpenReview</a></dd></div>
         </dl>
         <div class="hero__actions">
           <a class="btn btn--primary" href="call.html">Call for Papers</a>
@@ -244,7 +244,7 @@ ${cards}
       <div class="wrap wrap--narrow">
         <h2 class="section__title">Submission</h2>
         <ul class="facts">
-          <li><span class="facts__k">Submission portal</span><span class="facts__v"><span class="tbd">OpenReview link — TBD</span></span></li>
+          <li><span class="facts__k">Submission portal</span><span class="facts__v"><a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/Pre-to-Post">OpenReview submission portal</a></span></li>
           <li><span class="facts__k">Tracks</span><span class="facts__v">Short and long papers</span></li>
           <li><span class="facts__k">Format</span><span class="facts__v">Author&rsquo;s choice of <strong>NeurIPS</strong>, <strong>ICML</strong>, or <strong>ICLR</strong> style file</span></li>
           <li><span class="facts__k">Page limit</span><span class="facts__v">Matches the chosen format&rsquo;s own main-conference limit (excluding references &amp; appendix): <strong>9 pages</strong> for NeurIPS, <strong>8 pages</strong> for ICML, <strong>9 pages</strong> for ICLR</span></li>
