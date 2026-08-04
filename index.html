@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Transitioning from Pre-Training to Post-Training — NeurIPS 2026 Workshop</title>
-  <meta name="description" content="A NeurIPS 2026 workshop on the interaction between pre-training and post-training in modern foundation models. Sydney, Australia, December 11, 2026." />
-  <meta property="og:title" content="Transitioning from Pre-Training to Post-Training — NeurIPS 2026 Workshop" />
+  <meta name="description" content="A NeurIPS 2026 workshop on the interaction between pre-training and post-training for LLM training. Sydney, Australia, December 11, 2026." />
+  <meta property="og:title" content="Transitioning from Pre-Training to Post-Training; NeurIPS 2026 Workshop" />
   <meta property="og:description" content="Crystallizing the science of the pre-training-to-post-training transition in foundation models." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="assets/style.css" />
@@ -34,10 +34,11 @@
         <p class="hero__eyebrow">NeurIPS 2026 Workshop</p>
         <h1 class="hero__title">Transitioning from Pre-Training to Post-Training</h1>
         <p class="hero__lede">
-          A workshop on the interaction between pre-training and post-training in modern
-          foundation models &mdash; what a base model must possess for post-training to
-          succeed, how each procedure reshapes it, and when the transition fails.
-          Our goal is to crystallize the <em>science</em> of this transition.
+          A workshop on the interaction between pre-training and post-training for LLM training.
+          Key themes: (i) what a base model must possess for post-training to succeed,
+          (ii) what are the roles and properties for each stage of training, and
+          (iii) how do we predict success or failure.
+          <!-- Our goal is to crystallize the <em>science</em> of this transition. -->
         </p>
         <dl class="hero__facts">
           <div><dt>Date</dt><dd>December 11, 2026</dd></div>
@@ -58,9 +59,9 @@
       <div class="wrap wrap--narrow">
         <h2 class="section__title">Overview</h2>
         <p>
-          Modern foundation models are built in stages: large-scale pre-training, followed by an
-          increasingly complex post-training phase &mdash; supervised fine-tuning, preference
-          optimization, reinforcement learning, self-improvement, and distillation. Yet we lack a
+          Modern foundation models are built in stages: large-scale pre-training, followed by
+          increasingly complex post-training: supervised fine-tuning, preference
+          optimization, reinforcement learning, self-improvement, and (on-policy) distillation. Yet we lack a
           principled understanding of how these stages relate: what each stage is for, what a base
           model must provide for the next to succeed, and which steps are actually necessary. As
           instruction and reasoning data increasingly enters the pre-training mix, the boundary
