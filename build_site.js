@@ -22,6 +22,7 @@ const SPEAKERS = [
   { name: "Sewon Min",       affil: "UC Berkeley & AI2",                 url: "https://www.sewonmin.com/",                    img: "min.jpg" },
   { name: "Jason Weston",    affil: "Meta FAIR & NYU",                   url: "https://www.thespermwhale.com/jaseweston/",    img: "weston.jpg" },
   { name: "Anirudh Goyal",   affil: "Meta",                              url: "https://anirudh9119.github.io/",              img: "goyal.jpg" },
+  { name: "Akshay Krishnamurthy", affil: "Microsoft Research NYC",       url: "https://people.cs.umass.edu/~akshay/",         img: "krishnamurthy.jpg" },
 ];
 
 /* sorted alphabetically by last name */
