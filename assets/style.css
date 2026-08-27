@@ -199,11 +199,12 @@ strong { font-weight: 700; }
   border-left: 3px solid var(--alert);
   padding: 18px 22px; margin: 24px 0 0;
 }
-.announce__title {
+.announce p { margin: 0; color: var(--ink-soft); }
+.announce .announce__title {
   font-family: var(--serif); font-weight: 700; font-size: 1.05rem;
   color: var(--alert); margin: 0 0 6px;
+  text-transform: uppercase; letter-spacing: .06em;
 }
-.announce p { margin: 0; color: var(--ink-soft); }
 .announce strong { color: var(--ink); }
 
 .q-list { margin: 0; padding-left: 1.4em; list-style: decimal; }
