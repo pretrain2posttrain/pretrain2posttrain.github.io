@@ -14,6 +14,9 @@
   --accent:     #1a3a70;   /* plain academic navy */
   --accent-dk:  #12274d;
   --accent-tint:#eef1f6;
+  --alert:      #a32015;   /* announcements / deadline changes */
+  --alert-line: #e0b4ae;
+  --alert-tint: #fdf3f1;
   --white:      #ffffff;
 
   --maxw: 1080px;
@@ -189,6 +192,20 @@ strong { font-weight: 700; }
 .callout__title { font-size: 1.1rem; margin: 0 0 8px; }
 .callout p { margin: 0; color: var(--ink-soft); }
 
+/* ---------- Announcement (deadline changes, urgent notices) ---------- */
+.announce {
+  background: var(--alert-tint);
+  border: 1px solid var(--alert-line);
+  border-left: 3px solid var(--alert);
+  padding: 18px 22px; margin: 24px 0 0;
+}
+.announce__title {
+  font-family: var(--serif); font-weight: 700; font-size: 1.05rem;
+  color: var(--alert); margin: 0 0 6px;
+}
+.announce p { margin: 0; color: var(--ink-soft); }
+.announce strong { color: var(--ink); }
+
 .q-list { margin: 0; padding-left: 1.4em; list-style: decimal; }
 .q-list li {
   padding: 0 0 12px 8px; margin: 0;
@@ -269,6 +286,12 @@ strong { font-weight: 700; }
   font-weight: 700; color: var(--ink);
 }
 .timeline__label { flex: 1 1 auto; color: var(--ink-soft); }
+.extended {
+  display: inline-block; margin-left: 8px;
+  font-size: 13px; font-weight: 700; letter-spacing: .02em;
+  color: var(--alert);
+}
+.extended del { font-weight: 400; color: var(--ink-faint); }
 .timeline__item.is-past { opacity: .55; }
 .timeline__item.is-past .timeline__label { text-decoration: line-through; }
 

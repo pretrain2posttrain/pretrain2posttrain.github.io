@@ -59,8 +59,8 @@ const SCHEDULE = [
 
 const DATES = [
   ["Submission portal opens", "August 1, 2026", "2026-08-01"],
-  ["Submission deadline", "Aug 29 &rsquo;26 (Anywhere on Earth)", "2026-08-29"],
-  ["Author notification", "Sep 29 &rsquo;26 (Anywhere on Earth)", "2026-09-29"],
+  ["Submission deadline <span class=\"extended\">extended &mdash; was <del>August 29</del></span>", "September 4, 2026 (Anywhere on Earth)", "2026-09-04"],
+  ["Author notification", "September 29, 2026 (Anywhere on Earth)", "2026-09-29"],
   ["Camera-ready / poster upload", "", ""],
   ["Workshop day", DATE, "2026-12-11"],
 ];
