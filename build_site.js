@@ -5,7 +5,7 @@ const fs = require("fs");
 
 const SITE_TITLE = "Transitioning from Pre-Training to Post-Training";
 const VENUE = "NeurIPS 2026";
-const DATE = "December 11, 2026";
+const DATE = "December 12, 2026";
 const LOCATION = "Sydney, Australia";
 
 const NAV = [
@@ -63,7 +63,7 @@ const DATES = [
   ["Submission deadline <span class=\"extended\">extended &mdash; was <del>August 29</del></span>", "September 4, 2026 (Anywhere on Earth)", "2026-09-04"],
   ["Author notification", "September 29, 2026 (Anywhere on Earth)", "2026-09-29"],
   ["Camera-ready / poster upload", "", ""],
-  ["Workshop day", DATE, "2026-12-11"],
+  ["Workshop day", DATE, "2026-12-12"],
 ];
 
 /* ---------- shared partials ---------- */

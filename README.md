@@ -1,6 +1,6 @@
 # Transitioning from Pre-Training to Post-Training — Workshop Website
 
-Static, multi-page site for the NeurIPS 2026 workshop (Sydney, Australia · December 11, 2026).
+Static, multi-page site for the NeurIPS 2026 workshop (Sydney, Australia · December 12, 2026).
 Plain HTML/CSS/JS, no build step required to host — ready for GitHub Pages.
 
 ## Pages
