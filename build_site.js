@@ -7,6 +7,7 @@ const SITE_TITLE = "Transitioning from Pre-Training to Post-Training";
 const VENUE = "NeurIPS 2026";
 const DATE = "December 12, 2026";
 const LOCATION = "Sydney, Australia";
+const ROOM = "Cockle Bay Room";
 
 const NAV = [
   { href: "index.html",      label: "Home" },
@@ -17,12 +18,10 @@ const NAV = [
 ];
 
 const SPEAKERS = [
-  { name: "Sergey Levine",   affil: "UC Berkeley",                       url: "https://people.eecs.berkeley.edu/~svlevine/", img: "levine.jpg" },
-  { name: "Hanna Hajishirzi", affil: "University of Washington & Microsoft", url: "https://homes.cs.washington.edu/~hannaneh/", img: "hajishirzi.jpg" },
   { name: "Sewon Min",       affil: "UC Berkeley & AI2",                 url: "https://www.sewonmin.com/",                    img: "min.jpg" },
-  { name: "Jason Weston",    affil: "Meta FAIR & NYU",                   url: "https://www.thespermwhale.com/jaseweston/",    img: "weston.jpg" },
   { name: "Anirudh Goyal",   affil: "Meta",                              url: "https://anirudh9119.github.io/",              img: "goyal.jpg" },
   { name: "Akshay Krishnamurthy", affil: "Microsoft Research NYC",       url: "https://people.cs.umass.edu/~akshay/",         img: "krishnamurthy.jpg" },
+  { name: "Andrea Zanette",  affil: "Carnegie Mellon University",        url: "https://www.ece.cmu.edu/directory/bios/zanette-andrea.html", img: null, initials: "AZ" },
 ];
 
 /* sorted alphabetically by last name */
@@ -46,16 +45,16 @@ const TOPICS = [
 ];
 
 const SCHEDULE = [
-  ["09:00&ndash;09:15", "Registration &amp; opening remarks", ""],
-  ["09:15&ndash;10:15", "Invited talks 1&ndash;2", "25 min + 5 min Q&amp;A each"],
-  ["10:15&ndash;10:45", "Coffee &amp; Poster session I", ""],
-  ["10:45&ndash;12:00", "Contributed talks", "4 &times; 15 min + 3 min Q&amp;A"],
-  ["12:00&ndash;13:30", "Lunch", "independent"],
-  ["13:30&ndash;14:30", "Invited talks 3&ndash;4", ""],
-  ["14:30&ndash;15:30", "Panel: &ldquo;What must pre-training get right for post-training to succeed?&rdquo;", "moderated"],
-  ["15:30&ndash;16:00", "Coffee &amp; Poster session II", ""],
-  ["16:00&ndash;17:00", "Contributed talks", "4 &times; 15 min"],
-  ["17:00&ndash;17:30", "Closing remarks &amp; open mic", ""],
+  ["9:00&ndash;9:15&nbsp;AM", "Registration &amp; opening remarks", ""],
+  ["9:15&ndash;10:15&nbsp;AM", "Invited talks 1&ndash;2", "25 min + 5 min Q&amp;A each"],
+  ["10:15&ndash;10:45&nbsp;AM", "Coffee &amp; Poster session I", ""],
+  ["10:45&nbsp;AM&ndash;12:00&nbsp;PM", "Oral presentations", "4 &times; 15 min + 3 min Q&amp;A"],
+  ["12:00&ndash;1:30&nbsp;PM", "Lunch", "independent"],
+  ["1:30&ndash;2:30&nbsp;PM", "Invited talks 3&ndash;4", ""],
+  ["2:30&ndash;3:30&nbsp;PM", "Panel: &ldquo;What must pre-training get right for post-training to succeed?&rdquo;", "moderated"],
+  ["3:30&ndash;4:00&nbsp;PM", "Coffee &amp; Poster session II", ""],
+  ["4:00&ndash;5:00&nbsp;PM", "Oral presentations", "4 &times; 15 min"],
+  ["5:00&ndash;5:30&nbsp;PM", "Closing remarks &amp; open mic", ""],
 ];
 
 const DATES = [
@@ -158,7 +157,7 @@ function homeMain() {
         </p>
         <dl class="hero__facts">
           <div><dt>Date</dt><dd>${DATE}</dd></div>
-          <div><dt>Location</dt><dd>${LOCATION}</dd></div>
+          <div><dt>Location</dt><dd>${ROOM} &middot; ${LOCATION}</dd></div>
           <div><dt>Venue</dt><dd>${VENUE} &middot; <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/Pre-to-Post">OpenReview</a></dd></div>
         </dl>
         <div class="hero__actions">
@@ -283,7 +282,7 @@ function scheduleMain() {
   return `
   <main id="main">
     ${pageHeader(VENUE + " Workshop", "Tentative schedule",
-      "A full day (~8.5 hours, in-person): two contributed-talk sessions, two poster sessions, four invited talks, and one curated panel debate. The agenda is tentative and will be finalized closer to the event.")}
+      "A full day (~8.5 hours, in-person): two oral-presentation sessions, two poster sessions, four invited talks, and one curated panel debate. The agenda is tentative and will be finalized closer to the event.")}
     <section class="section">
       <div class="wrap wrap--narrow">
         <table class="schedule" aria-label="Tentative workshop schedule">
