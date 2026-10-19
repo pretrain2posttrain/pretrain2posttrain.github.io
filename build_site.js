@@ -9,9 +9,16 @@ const DATE = "December 12, 2026";
 const LOCATION = "Sydney, Australia";
 const ROOM = "Cockle Bay Room";
 
+/* Accepted-paper presentation details */
+const POSTER_SIZE = "61&nbsp;cm (W) &times; 85&nbsp;cm (H)";
+const POSTER_PRINT_URL = "https://www.postersessiononline.eu/pr/poster2.asp?congreso=469631373";
+const POSTER_INFO_URL = "https://neurips.cc/Conferences/2026/PosterInstructions";
+const ORAL_SLOTS = 8;
+
 const NAV = [
   { href: "index.html",      label: "Home" },
   { href: "call.html",       label: "Call for Papers" },
+  { href: "accepted.html",   label: "Accepted Papers" },
   { href: "schedule.html",   label: "Schedule" },
   { href: "speakers.html",   label: "Speakers" },
   { href: "organizers.html", label: "Organizers" },
@@ -45,15 +52,15 @@ const TOPICS = [
 ];
 
 const SCHEDULE = [
-  ["9:00&ndash;9:15&nbsp;AM", "Registration &amp; opening remarks", ""],
-  ["9:15&ndash;10:15&nbsp;AM", "Invited talks 1&ndash;2", "25 min + 5 min Q&amp;A each"],
-  ["10:15&ndash;10:45&nbsp;AM", "Coffee &amp; Poster session I", ""],
-  ["10:45&nbsp;AM&ndash;12:00&nbsp;PM", "Oral presentations", "4 &times; 15 min + 3 min Q&amp;A"],
-  ["12:00&ndash;1:30&nbsp;PM", "Lunch", "independent"],
-  ["1:30&ndash;2:30&nbsp;PM", "Invited talks 3&ndash;4", ""],
+  ["9:00&ndash;9:15&nbsp;AM", "Opening remarks", ""],
+  ["9:15&ndash;10:15&nbsp;AM", "Invited talks", "2 &times; 25 min + 5 min Q&amp;A"],
+  ["10:15&ndash;11:15&nbsp;AM", "Poster session 1", ""],
+  ["11:15&nbsp;AM&ndash;12:15&nbsp;PM", "Oral presentations", "4 &times; 12 min + 3 min Q&amp;A"],
+  ["12:15&ndash;1:30&nbsp;PM", "Lunch", "independent"],
+  ["1:30&ndash;2:30&nbsp;PM", "Invited talks", "2 &times; 25 min + 5 min Q&amp;A"],
   ["2:30&ndash;3:30&nbsp;PM", "Panel: &ldquo;What must pre-training get right for post-training to succeed?&rdquo;", "moderated"],
-  ["3:30&ndash;4:00&nbsp;PM", "Coffee &amp; Poster session II", ""],
-  ["4:00&ndash;5:00&nbsp;PM", "Oral presentations", "4 &times; 15 min"],
+  ["3:30&ndash;4:00&nbsp;PM", "Poster session 2", ""],
+  ["4:00&ndash;5:00&nbsp;PM", "Oral presentations", "4 &times; 12 min + 3 min Q&amp;A"],
   ["5:00&ndash;5:30&nbsp;PM", "Closing remarks &amp; open mic", ""],
 ];
 
@@ -296,6 +303,43 @@ ${rows}
   </main>`;
 }
 
+function acceptedMain() {
+  return `
+  <main id="main">
+    ${pageHeader(VENUE + " Workshop", "Accepted papers instructions",
+      "Instructions for authors of accepted papers. Every accepted paper is presented as a poster; a subset is additionally selected for an oral presentation.")}
+
+    <section class="section">
+      <div class="wrap wrap--narrow">
+        <h2 class="section__title">Posters</h2>
+        <ul class="facts">
+          <li><span class="facts__k">Poster size</span><span class="facts__v"><strong>${POSTER_SIZE}</strong>, portrait format</span></li>
+          <li><span class="facts__k">Poster sessions</span><span class="facts__v">Two sessions, each one hour</span></li>
+          <li><span class="facts__k">Printing</span><span class="facts__v"><a href="${POSTER_PRINT_URL}" target="_blank" rel="noopener">Order a printed poster via PosterSessionOnline</a></span></li>
+          <li><span class="facts__k">NeurIPS guidance</span><span class="facts__v"><a href="${POSTER_INFO_URL}" target="_blank" rel="noopener">Official ${VENUE} poster instructions</a></span></li>
+        </ul>
+        <p class="note">
+          Note the portrait orientation and the workshop-specific dimensions &mdash; they differ from the main-conference poster size.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="wrap wrap--narrow">
+        <h2 class="section__title">Oral presentations</h2>
+        <ul class="facts">
+          <li><span class="facts__k">Slots</span><span class="facts__v">${ORAL_SLOTS} oral presentations</span></li>
+          <li><span class="facts__k">Length</span><span class="facts__v">15 minutes per talk</span></li>
+          <li><span class="facts__k">Format</span><span class="facts__v">12-minute talk followed by 3 minutes of questions</span></li>
+        </ul>
+        <p class="note">
+          Session times are listed on the <a href="schedule.html">schedule</a>.
+        </p>
+      </div>
+    </section>
+  </main>`;
+}
+
 function speakersMain() {
   const cards = SPEAKERS.map(function (p) { return personCard(p, true); }).join("\n");
   return `
@@ -343,6 +387,7 @@ const rel = ""; // all pages at root
 const PAGES = [
   ["index.html",      `${SITE_TITLE} — ${VENUE} Workshop`, homeMain()],
   ["call.html",       `Call for Papers — ${SITE_TITLE}`,   callMain()],
+  ["accepted.html",   `Accepted Papers Instructions — ${SITE_TITLE}`, acceptedMain()],
   ["schedule.html",   `Schedule — ${SITE_TITLE}`,          scheduleMain()],
   ["speakers.html",   `Speakers — ${SITE_TITLE}`,          speakersMain()],
   ["organizers.html", `Organizers — ${SITE_TITLE}`,        organizersMain()],
