@@ -28,17 +28,17 @@ const SPEAKERS = [
   { name: "Sewon Min",       affil: "UC Berkeley & AI2",                 url: "https://www.sewonmin.com/",                    img: "min.jpg" },
   { name: "Anirudh Goyal",   affil: "Meta",                              url: "https://anirudh9119.github.io/",              img: "goyal.jpg" },
   { name: "Akshay Krishnamurthy", affil: "Microsoft Research NYC",       url: "https://people.cs.umass.edu/~akshay/",         img: "krishnamurthy.jpg" },
-  { name: "Andrea Zanette",  affil: "Carnegie Mellon University",        url: "https://www.ece.cmu.edu/directory/bios/zanette-andrea.html", img: null, initials: "AZ" },
+  { name: "Andrea Zanette",  affil: "Carnegie Mellon University",        url: "https://azanette.com/",                       img: "zanette.jpg" },
 ];
 
 /* sorted alphabetically by last name */
 const ORGANIZERS = [
-  { name: "Rachit Bansal",   affil: "Harvard University · Kempner Institute · Contact", url: "https://rachitbansal.github.io", img: "bansal.jpg", initials: "RB" },
+  { name: "Rachit Bansal",   affil: "Harvard University&nbsp;· Kempner Institute · Contact", url: "https://rachitbansal.github.io", img: "bansal.jpg", initials: "RB" },
   { name: "Samy Jelassi",    affil: "Microsoft Research NE",       url: "https://sjelassi.github.io",  img: "jelassi.jpg", initials: "SJ" },
-  { name: "Sham Kakade",     affil: "Harvard University · Kempner Institute", url: "https://shamulent.github.io", img: "kakade.jpg", initials: "SK" },
+  { name: "Sham Kakade",     affil: "Harvard University&nbsp;· Kempner Institute", url: "https://shamulent.github.io", img: "kakade.jpg", initials: "SK" },
   { name: "Eran Malach",     affil: "Apple ML Research",           url: "https://www.eranmalach.com",  img: null,         initials: "EM" },
-  { name: "Clara Mohri",     affil: "Harvard University · Kempner Institute", url: "https://cmohri.github.io/", img: "mohri.jpg", initials: "CM" },
-  { name: "Sunny (Tian) Qin", affil: "Harvard University · Kempner Institute", url: "https://sunnytqin.github.io", img: "qin.jpg",    initials: "SQ" },
+  { name: "Clara Mohri",     affil: "Harvard University&nbsp;· Kempner Institute", url: "https://cmohri.github.io/", img: "mohri.jpg", initials: "CM" },
+  { name: "Sunny (Tian) Qin", affil: "Harvard University&nbsp;· Kempner Institute", url: "https://sunnytqin.github.io", img: "qin.jpg",    initials: "SQ" },
   { name: "Harman Singh",    affil: "UC Berkeley",                 url: "https://harmandotpy.github.io", img: "singh.jpg", initials: "HS" },
 ];
 
@@ -143,7 +143,7 @@ function personCard(p, big) {
     : `<span class="avatar${size}" data-initials="${p.initials}" aria-hidden="true"></span>`;
   return `          <a class="person" href="${p.url}" target="_blank" rel="noopener">
             ${media}
-            <span class="person__name">${p.name} <span class="person__ext" aria-hidden="true">↗</span></span>
+            <span class="person__name">${p.name}&nbsp;<span class="person__ext" aria-hidden="true">↗</span></span>
             <span class="person__affil">${p.affil}</span>
           </a>`;
 }
